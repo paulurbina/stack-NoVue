@@ -3,7 +3,7 @@ AuthenticateControllerPolice = require('./policies/AuthenticateControllerPolice'
 
 module.exports = (app) => {
     app.post('/register',
-    AuthenticateControllerPolice.register,
+    // AuthenticateControllerPolice.register,
     AuthenticationController.register),
 
     app.post('/login',

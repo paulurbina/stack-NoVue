@@ -12,8 +12,9 @@ mongoose.connect(config.URL, { useNewUrlParser: true })
     .then(db => console.log('>> Connect DB'))
     .catch(err => err)
 
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
-app.use(morgan('combined'))
+app.use(morgan('dev'))
 app.use(cors())
 
 // routes

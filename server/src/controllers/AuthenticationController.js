@@ -13,7 +13,7 @@ module.exports = {
     async register (req, res) {
         try {
             const user = await new User(req.body)
-                res.send({
+            res.send({
                     message: 'Your register',
                     user
                 })
